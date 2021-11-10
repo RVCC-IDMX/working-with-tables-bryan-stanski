@@ -1,3 +1,147 @@
 body {
+  /* For the love of god fix this text color before committing */
+  color: rgb(61, 71, 209);
   background-color: aliceblue;
+  background-image: linear-gradient(to bottom right, rgb(191, 130, 226), cyan);
+  margin: auto;
+  display: grid;
+}
+
+h1 {
+  font-size: 25px;
+  margin-bottom: 0px;
+  margin-left: 200px;
+  margin-right: auto;
+}
+
+h2 {
+  margin-bottom: 0px;
+  margin-left: 225px;
+  margin-right: auto;
+  padding-bottom: 10px;
+}
+
+.credits {
+  margin-top: 10px;
+  margin-left: 0px;
+  margin-right: auto;
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+
+.credits p {
+  padding-left: 0px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+/* Table Styling */
+
+div.table-container {
+  grid-area: mid;
+  font-size: x-small;
+}
+
+.table-container {
+  display: grid;
+  grid-template-areas: "head"
+                       "head2"
+                       "table"
+                       "foot";
+}
+
+.table-container > h1 {
+  grid-area: head;
+}
+
+.table-container > h2 {
+  grid-area: head2;
+}
+
+.table-container > table {
+  grid-area: table;
+}
+
+.table-container > footer {
+  grid-area: foot;
+}
+
+.table-container h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-container h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  padding: 5px;
+  margin-right: auto;
+}
+
+tbody td:nth-child(n) {
+  font-size: x-small;
+}
+
+thead th:nth-child(n) {
+  font-size: x-small;
+  font-weight: bold;
+}
+
+tbody tr td:nth-child(1) {
+  font-style: italic;
+}
+
+/* Smaller than 600 wide */
+@media screen and (max-width: 600px) {
+  h1 {
+    padding-top: 10px;
+    margin: auto;
+    font-size: 20px;
+  }
+  h2 {
+    margin-left: auto;
+    font-size: 13px;
+  }
+  .credits {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+    font-size: 20px;
+  }
+
+  .credits p {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+  }
+}
+
+/* Large Screen Styling */
+
+@media screen and (min-width: 960px) {
+  h2 {
+    margin-bottom: 0px;
+    margin-left: 225px;
+    margin-right: auto;
+  }
+
+  .credits {
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: auto;
+    padding-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  .credits p {
+    padding-left: 0px;
+    padding-right: 20px;
+    text-align: center;
+  }
 }
